@@ -3,6 +3,12 @@
 function renderLicenseBadge(license) {
   if (license === 'Boost'){
     return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
+  } else if (license === 'Apache') {
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+  } else if (license === 'BSD') {
+    return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`
+  } else {
+    return `There is currently no license.`
   }
 }
 
@@ -11,7 +17,15 @@ function renderLicenseBadge(license) {
 function generateMarkdown(data) {
   return `
 
-  # TABLE OF CONTENTS
+  # Title
+
+  ## ${data.title}
+
+  # Description
+
+  ${data.description}
+
+  # Table of Contents
 
   <!--ts-->
    * [Title](#title)
@@ -20,37 +34,35 @@ function generateMarkdown(data) {
    * [Usage](#usage)
    * [License](#license)
    * [Contribution](#contribution)
-   * [Email](#email)
+   * [Tests](#tests)
+   * [Questions](#questions)
 <!--te-->
 
+  # Installation
 
-  # TITLE
+  ${data.installation}
 
-  ### ${data.title}
+  # Usage
 
-  # DESCRIPTION
+  ${data.usage}
 
-  ### ${data.description}
+  # License
 
-  # INSTALLATION
+  ${renderLicenseBadge(data.license)}
 
-  ### ${data.installation}
+  # Contribution
 
-  #USAGE
+  ${data.contribution}
 
-  ### ${data.usage}
+  # Tests
 
-  # LICENSE
+  ${data.tests}
 
-  ### ${renderLicenseBadge(data.license)}
+  # Questions
 
-  #CONTRIBUTION
+  Please email: ${data.email} 
 
-  ### ${data.contribution}
-
-  #EMAIL
-
-  ### ${data.email}
+  Github account: https://github.com/${data.github}
 
 `;
 }
