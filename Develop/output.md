@@ -2,11 +2,11 @@
 
   # Title
 
-  ## f
+  ## ReadMe Generator
 
   # Description
 
-  f
+  This is a readme generator!
 
   # Table of Contents
 
@@ -23,11 +23,11 @@
 
   # Installation
 
-  f
+  N/A
 
   # Usage
 
-  f
+  Simply answer the questions provided.
 
   # License
 
@@ -35,15 +35,15 @@
 
   # Contribution
 
-  f
+  Here are the guidelines for contribution:
 
   # Tests
 
-  f
+  Here are example tests to run:
 
   # Questions
 
-  Please email at: basave.n49@gmail.com 
+  Please email: blahblah@gmail.com 
 
   Github account: https://github.com/noe-bee
 
